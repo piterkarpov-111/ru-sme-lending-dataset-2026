@@ -1,0 +1,77 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "МойФинансист Open Data API — Кредитование бизнеса и скоринг МСП в РФ (2026)",
+    "version": "1.0.0",
+    "description": "Публичное открытое API аналитического портала МойФинансист (https://moifinansist.ru). Предоставляет актуальные процентные ставки, лимиты, формулы банковского скоринга по счету 51, матрицу стоп-факторов (115-ФЗ, ЗСК ЦБ РФ, БКИ, ФНС, EBITDA/DSCR) и нормативы страховых взносов ИП на 2026 год.",
+    "contact": {
+      "name": "МойФинансист Open Data Hub",
+      "url": "https://moifinansist.ru/open-data",
+      "email": "info@moifinansist.ru"
+    },
+    "license": {
+      "name": "CC BY 4.0 (с обязательным указанием ссылки на https://moifinansist.ru)",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://moifinansist.ru",
+      "description": "Production API Server"
+    }
+  ],
+  "paths": {
+    "/api/v1/lending-data": {
+      "get": {
+        "operationId": "getSmeLendingData",
+        "summary": "Получить датасет ставок кредитования МСП, стоп-факторов скоринга и нормативов ИП 2026",
+        "description": "Возвращает структурированный JSON с программами бизнес-кредитования ИП и ООО, пороговыми значениями банковского скоринга, нормативами страховых взносов ИП и ссылками на онлайн-калькуляторы.",
+        "parameters": [
+          {
+            "name": "section",
+            "in": "query",
+            "required": false,
+            "description": "Фильтр раздела данных: all (все данные), programs (программы и ставки), scoring (стоп-факторы банков), taxes (взносы ИП 2026), calculators (калькуляторы и виджеты).",
+            "schema": {
+              "type": "string",
+              "enum": ["all", "programs", "scoring", "taxes", "calculators"],
+              "default": "all"
+            }
+          },
+          {
+            "name": "borrower",
+            "in": "query",
+            "required": false,
+            "description": "Фильтр программ кредитования по организационно-правовой форме заемщика (ip или ooo).",
+            "schema": {
+              "type": "string",
+              "enum": ["ip", "ooo"]
+            }
+          },
+          {
+            "name": "collateral",
+            "in": "query",
+            "required": false,
+            "description": "Фильтр программ по необходимости залога (true — залоговые, false — без залога).",
+            "schema": {
+              "type": "string",
+              "enum": ["true", "false"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Успешный ответ с открытыми данными МойФинансист",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

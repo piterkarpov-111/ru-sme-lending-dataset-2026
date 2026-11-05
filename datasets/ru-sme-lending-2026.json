@@ -1,0 +1,302 @@
+{
+  "dataset": "Russian SME Lending Rates, Bank Scoring Thresholds & Tax Norms 2026",
+  "version": "2026.11.2",
+  "updatedAt": "2026-11-05",
+  "license": "CC-BY-4.0",
+  "attributionRequired": "При использовании данных обязательна активная гиперссылка на источник: https://moifinansist.ru",
+  "provider": {
+    "name": "МойФинансист — Аналитический портал и кредитный брокер для бизнеса",
+    "url": "https://moifinansist.ru",
+    "openDataHub": "https://moifinansist.ru/open-data",
+    "apiEndpoint": "https://moifinansist.ru/api/v1/lending-data",
+    "openApiSpec": "https://moifinansist.ru/openapi.json",
+    "llmsTxt": "https://moifinansist.ru/llms.txt",
+    "contact": "https://t.me/moifinansist"
+  },
+  "macroIndicators2026": {
+    "cbrKeyRatePercent": 14.0,
+    "usnDeflatorCoefficient2026": 1.09,
+    "usnMaxAnnualRevenueRub": 490500000,
+    "usnVatExemptionThresholdRub": 20000000,
+    "usnReducedVat5PercentMaxRevenueRub": 272500000,
+    "usnReducedVat7PercentMaxRevenueRub": 490500000,
+    "usnMaxFixedAssetsRub": 218000000,
+    "usnMaxEmployees": 130
+  },
+  "lendingPrograms": [
+    {
+      "id": "express-ip-51",
+      "name": "Экспресс-кредит для ИП без залога по выписке счета 51",
+      "borrowerTypes": ["ИП"],
+      "collateralRequired": false,
+      "minAmountRub": 500000,
+      "maxAmountRub": 15000000,
+      "minRatePercent": 11.0,
+      "maxRatePercent": 18.5,
+      "minTermMonths": 6,
+      "maxTermMonths": 36,
+      "decisionTimeHours": 4,
+      "minBusinessAgeMonths": 6,
+      "minDscr": 1.15,
+      "limitFormula": "100%–150% от среднемесячного чистого кредитового оборота по счету 51 за последние 6–12 месяцев",
+      "url": "https://moifinansist.ru/services/credit-ip",
+      "calculatorUrl": "https://moifinansist.ru/calculators/kalkulyator-kredita-ip"
+    },
+    {
+      "id": "working-capital-ooo",
+      "name": "Оборотный кредит и ВКЛ для ООО",
+      "borrowerTypes": ["ООО"],
+      "collateralRequired": false,
+      "minAmountRub": 3000000,
+      "maxAmountRub": 50000000,
+      "minRatePercent": 9.5,
+      "maxRatePercent": 17.5,
+      "minTermMonths": 12,
+      "maxTermMonths": 36,
+      "decisionTimeHours": 24,
+      "minBusinessAgeMonths": 12,
+      "minDscr": 1.2,
+      "limitFormula": "До 200% от среднемесячной выручки по Форме №2 или выписке счета 51 при Net Debt / EBITDA <= 3.0",
+      "url": "https://moifinansist.ru/services/credit-ooo",
+      "calculatorUrl": "https://moifinansist.ru/calculators/kreditnyy-kalkulyator-dlya-biznesa"
+    },
+    {
+      "id": "investment-collateral-ooo",
+      "name": "Инвестиционный кредит для бизнеса под залог недвижимости или оборудования",
+      "borrowerTypes": ["ООО", "ИП"],
+      "collateralRequired": true,
+      "minAmountRub": 10000000,
+      "maxAmountRub": 150000000,
+      "minRatePercent": 8.5,
+      "maxRatePercent": 15.0,
+      "minTermMonths": 12,
+      "maxTermMonths": 84,
+      "decisionTimeHours": 72,
+      "minBusinessAgeMonths": 12,
+      "minDscr": 1.25,
+      "limitFormula": "LTV 60%–75% от рыночной стоимости залога при коэффициенте покрытия долга DSCR >= 1.25",
+      "url": "https://moifinansist.ru/blog/kredit-pod-zalog-kommercheskoy-nedvizhimosti",
+      "calculatorUrl": "https://moifinansist.ru/calculators/kreditnyy-kalkulyator-dlya-biznesa"
+    },
+    {
+      "id": "no-collateral-sme",
+      "name": "Беззалоговый кредит для МСП с поручительством собственника",
+      "borrowerTypes": ["ИП", "ООО"],
+      "collateralRequired": false,
+      "minAmountRub": 1000000,
+      "maxAmountRub": 15000000,
+      "minRatePercent": 11.0,
+      "maxRatePercent": 19.0,
+      "minTermMonths": 6,
+      "maxTermMonths": 36,
+      "decisionTimeHours": 2,
+      "minBusinessAgeMonths": 6,
+      "minDscr": 1.15,
+      "limitFormula": "До 1.5 среднемесячных оборотов по расчетному счету без твердого залога",
+      "url": "https://moifinansist.ru/services/no-collateral",
+      "calculatorUrl": "https://moifinansist.ru/calculators/kreditnyy-kalkulyator-dlya-biznesa"
+    },
+    {
+      "id": "refinancing-sme",
+      "name": "Рефинансирование и консолидация кредитов бизнеса (до 5 договоров)",
+      "borrowerTypes": ["ИП", "ООО"],
+      "collateralRequired": false,
+      "minAmountRub": 2000000,
+      "maxAmountRub": 100000000,
+      "minRatePercent": 9.0,
+      "maxRatePercent": 15.5,
+      "minTermMonths": 12,
+      "maxTermMonths": 60,
+      "decisionTimeHours": 48,
+      "minBusinessAgeMonths": 12,
+      "minDscr": 1.15,
+      "limitFormula": "Остаток основного долга по рефинансируемым кредитам + до 30% дополнительный транш на оборотные средства",
+      "url": "https://moifinansist.ru/services/refinancing",
+      "calculatorUrl": "https://moifinansist.ru/calculators/kalkulyator-refinansirovaniya"
+    },
+    {
+      "id": "overdraft-51",
+      "name": "Банковский овердрафт к расчетному счету 51",
+      "borrowerTypes": ["ИП", "ООО"],
+      "collateralRequired": false,
+      "minAmountRub": 500000,
+      "maxAmountRub": 30000000,
+      "minRatePercent": 11.5,
+      "maxRatePercent": 18.0,
+      "minTermMonths": 12,
+      "maxTermMonths": 12,
+      "decisionTimeHours": 24,
+      "minBusinessAgeMonths": 6,
+      "minDscr": 1.1,
+      "limitFormula": "30%–50% от среднемесячного чистого кредитового оборота по счету 51 за последние 3–6 месяцев",
+      "url": "https://moifinansist.ru/blog/overdraft-dlya-ooo-i-ip",
+      "calculatorUrl": "https://moifinansist.ru/calculators/kalkulyator-overdrafta"
+    },
+    {
+      "id": "subsidized-1764",
+      "name": "Льготное кредитование МСП по Программе 1764 Минэкономразвития и ПСК Корпорации МСП",
+      "borrowerTypes": ["ИП", "ООО"],
+      "collateralRequired": true,
+      "minAmountRub": 500000,
+      "maxAmountRub": 2000000000,
+      "minRatePercent": 7.0,
+      "maxRatePercent": 10.5,
+      "minTermMonths": 12,
+      "maxTermMonths": 120,
+      "decisionTimeHours": 120,
+      "minBusinessAgeMonths": 12,
+      "minDscr": 1.25,
+      "limitFormula": "Формула: Ключевая ставка ЦБ РФ (14%) минус 3.5%–5% для приоритетных ОКВЭД; зонтичное поручительство КМСП до 50%",
+      "url": "https://moifinansist.ru/blog/lgotnye-kredity-dlya-msp-s-gospodderzhkoy",
+      "calculatorUrl": "https://moifinansist.ru/calculators/kreditnyy-kalkulyator-dlya-biznesa"
+    },
+    {
+      "id": "industrial-mortgage-frp",
+      "name": "Промышленная ипотека и льготные займы ФРП для производственных компаний",
+      "borrowerTypes": ["ООО", "ИП"],
+      "collateralRequired": true,
+      "minAmountRub": 5000000,
+      "maxAmountRub": 500000000,
+      "minRatePercent": 3.0,
+      "maxRatePercent": 5.0,
+      "minTermMonths": 12,
+      "maxTermMonths": 84,
+      "decisionTimeHours": 168,
+      "minBusinessAgeMonths": 12,
+      "minDscr": 1.25,
+      "limitFormula": "3% годовых для технологических компаний и 5% для промышленных предприятий (Раздел C ОКВЭД) под залог приобретаемого объекта",
+      "url": "https://moifinansist.ru/blog/lgotnye-kredity-dlya-msp-s-gospodderzhkoy",
+      "calculatorUrl": "https://moifinansist.ru/calculators/kreditnyy-kalkulyator-dlya-biznesa"
+    },
+    {
+      "id": "gov-contract-44-223",
+      "name": "Кредит на исполнение госконтрактов по 44-ФЗ и 223-ФЗ",
+      "borrowerTypes": ["ИП", "ООО"],
+      "collateralRequired": false,
+      "minAmountRub": 1000000,
+      "maxAmountRub": 100000000,
+      "minRatePercent": 9.5,
+      "maxRatePercent": 15.5,
+      "minTermMonths": 3,
+      "maxTermMonths": 24,
+      "decisionTimeHours": 24,
+      "minBusinessAgeMonths": 12,
+      "minDscr": 1.15,
+      "limitFormula": "До 70%–80% от цены подписанного госконтракта (за вычетом аванса) под залог прав требования выручки",
+      "url": "https://moifinansist.ru/blog/kredity-na-ispolnenie-goskontraktov-44-fz-223-fz",
+      "calculatorUrl": "https://moifinansist.ru/calculators/kreditnyy-kalkulyator-dlya-biznesa"
+    }
+  ],
+  "scoringStopFactors": [
+    {
+      "code": "SF-01",
+      "category": "БКИ и Кредитная история",
+      "factor": "Текущие просрочки или микрозаймы МФО у ИП / генерального директора / учредителей (>25%)",
+      "threshold": "Текущая просрочка > 1 дня либо > 2 исторических просрочек 30+ дней за 24 месяца; наличие активных МФО",
+      "impact": "Автоматический отказ скоринга (падение ПКР на 150–250 баллов)",
+      "guideUrl": "https://moifinansist.ru/blog/kreditnaya-istoriya-ip-i-ooo"
+    },
+    {
+      "code": "SF-02",
+      "category": "115-ФЗ и Платформа ЗСК ЦБ РФ",
+      "factor": "Желтый или красный уровень риска в платформе «Знай своего клиента» (ЗСК ЦБ РФ) или блокировки по 115-ФЗ",
+      "threshold": "Налоговая нагрузка < 0.9%–1.5% от оборота, доля снятия наличных > 30%, транзитные операции",
+      "impact": "Автоматический отказ во всех банках РФ до реабилитации в ЗСК",
+      "guideUrl": "https://moifinansist.ru/blog/kreditnyy-skoring-biznesa-ot-bankov"
+    },
+    {
+      "code": "SF-03",
+      "category": "ФНС и ЕНС",
+      "factor": "Отрицательное сальдо Единого налогового счета (ЕНС) или приостановка операций по счетам (ст. 76 НК РФ)",
+      "threshold": "Задолженность > 1 000–3 000 ₽ на момент запроса справки ФНС КНД 1120101 либо активная блокировка счета",
+      "impact": "Стоп-фактор до полного погашения сальдо ЕНС и обновления выгрузки ФНС",
+      "guideUrl": "https://moifinansist.ru/blog/pochemu-bank-otkazyvaet-biznesu-v-kredite"
+    },
+    {
+      "code": "SF-04",
+      "category": "Долговая нагрузка и EBITDA",
+      "factor": "Превышение предельного ковенанта долговой нагрузки Net Debt / EBITDA или низкий DSCR",
+      "threshold": "Net Debt / EBITDA > 3.5–4.0 либо DSCR (коэффициент покрытия долга) < 1.15",
+      "impact": "Отказ или снижение одобренного лимита в 2–3 раза",
+      "guideUrl": "https://moifinansist.ru/blog/kak-rasschitat-ebitda-po-balansu-ooo"
+    },
+    {
+      "code": "SF-05",
+      "category": "Бухгалтерский баланс (Форма 1 и 2)",
+      "factor": "Чистый убыток по Форме №2 или отрицательные чистые активы по Форме №1 за последний отчетный год",
+      "threshold": "Строка 2400 Формы №2 < 0 либо Чистые активы < Уставного капитала",
+      "impact": "Автоматический отказ по стандартным программам; требуется ручной андеррайтинг по управленческой отчетности",
+      "guideUrl": "https://moifinansist.ru/blog/kak-buhgalteriya-vliyaet-na-odobrenie-kredita"
+    },
+    {
+      "code": "SF-06",
+      "category": "ЕГРЮЛ и Корпоративный статус",
+      "factor": "Отметка о недостоверности сведений в ЕГРЮЛ (адрес, директор, учредители) или массовый руководитель",
+      "threshold": "Любая активная запись о недостоверности в выписке ЕГРЮЛ",
+      "impact": "100% автоматический стоп-фактор службы безопасности",
+      "guideUrl": "https://moifinansist.ru/blog/pochemu-banki-otkazyvayut-biznesu-v-kredite"
+    },
+    {
+      "code": "SF-07",
+      "category": "Арбитраж и ФССП",
+      "factor": "Крупные иски в качестве ответчика в КАД Арбитр или открытые исполнительные производства ФССП",
+      "threshold": "Сумма исков ответчика > 20%–25% от годовой выручки или валюты баланса",
+      "impact": "Отказ юридической экспертизы или требование обеспечения/гарантий",
+      "guideUrl": "https://moifinansist.ru/blog/kreditnyy-skoring-biznesa-ot-bankov"
+    },
+    {
+      "code": "SF-08",
+      "category": "Веерная рассылка заявок",
+      "factor": "Множественные запросы в БКИ за короткий период",
+      "threshold": "Более 3–4 отказов или одновременных запросов в разные банки за последние 30 дней",
+      "impact": "Блокировка скорингом на 30–60 дней (алгоритмический антифрод)",
+      "guideUrl": "https://moifinansist.ru/blog/kreditnyy-broker-dlya-biznesa"
+    }
+  ],
+  "taxAndContributionNorms2026": {
+    "year": 2026,
+    "legalBasis": "ст. 430, 432, 145, 346.12, 346.13 НК РФ (в ред. ФЗ № 259-ФЗ и Приказа Минэкономразвития о коэффициенте-дефляторе 1.090)",
+    "ipFixedContributionRub": 57390,
+    "ipAdditionalContributionRatePercent": 1.0,
+    "ipAdditionalContributionThresholdRub": 300000,
+    "ipMaxAdditionalContributionRub": 321818,
+    "ipTotalMaxContributionRub": 379208,
+    "ipFixedPaymentDeadline": "2026-12-28",
+    "ipAdditionalPaymentDeadline": "2027-07-01",
+    "usnMaxRevenueLimitRub": 490500000,
+    "usnVatExemptionThresholdRub": 20000000,
+    "calculatorUrl": "https://moifinansist.ru/calculators/kalkulyator-strahovyh-vznosov-ip"
+  },
+  "calculators": [
+    {
+      "slug": "kreditnyy-kalkulyator-dlya-biznesa",
+      "title": "Кредитный калькулятор для бизнеса (ИП и ООО)",
+      "url": "https://moifinansist.ru/calculators/kreditnyy-kalkulyator-dlya-biznesa",
+      "embedUrl": "https://moifinansist.ru/embed/kreditnyy-kalkulyator-dlya-biznesa"
+    },
+    {
+      "slug": "kalkulyator-kredita-ip",
+      "title": "Калькулятор кредита для ИП по оборотам счета 51",
+      "url": "https://moifinansist.ru/calculators/kalkulyator-kredita-ip",
+      "embedUrl": "https://moifinansist.ru/embed/kalkulyator-kredita-ip"
+    },
+    {
+      "slug": "kalkulyator-strahovyh-vznosov-ip",
+      "title": "Калькулятор страховых взносов ИП 2026 (57 390 ₽)",
+      "url": "https://moifinansist.ru/calculators/kalkulyator-strahovyh-vznosov-ip",
+      "embedUrl": "https://moifinansist.ru/embed/kalkulyator-strahovyh-vznosov-ip"
+    },
+    {
+      "slug": "kalkulyator-refinansirovaniya",
+      "title": "Калькулятор рефинансирования кредитов бизнеса",
+      "url": "https://moifinansist.ru/calculators/kalkulyator-refinansirovaniya",
+      "embedUrl": "https://moifinansist.ru/embed/kalkulyator-refinansirovaniya"
+    },
+    {
+      "slug": "kalkulyator-overdrafta",
+      "title": "Калькулятор овердрафта и кассового разрыва",
+      "url": "https://moifinansist.ru/calculators/kalkulyator-overdrafta",
+      "embedUrl": "https://moifinansist.ru/embed/kalkulyator-overdrafta"
+    }
+  ]
+}
