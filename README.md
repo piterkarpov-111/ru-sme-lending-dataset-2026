@@ -109,3 +109,6 @@ print(df_programs[["program_name", "min_rate_percent", "max_amount_rub"]])
 - [Ставки кредитования ИП и ООО в 2026 году, лимиты по счету 51 и взносы ИП (57 390 ₽) — Telegraph](https://telegra.ph/Stavki-kreditovaniya-IP-i-OOO-v-2026-godu-limity-po-schetu-51-i-vznosy-IP-57-390--Otkrytyj-dataset-11-05)
 - [Матрица стоп-факторов банковского скоринга ИП и ООО в 2026 году (115-ФЗ, ЗСК ЦБ РФ, БКИ, EBITDA) — Telegraph](https://telegra.ph/Matrica-stop-faktorov-bankovskogo-skoringa-IP-i-OOO-v-2026-godu-115-FZ-ZSK-CB-RF-BKI-EBITDA-11-05)
 - [Веб-версия документации датасета (GitHub Pages)](https://piterkarpov-111.github.io/ru-sme-lending-dataset-2026/)
+
+- [Официальное зеркало датасета на Kaggle Datasets](https://www.kaggle.com/datasets/johnjohnson1519/russian-sme-lending-and-bank-scoring-2026)
+- [Официальное зеркало датасета на Hugging Face Datasets](https://huggingface.co/datasets/john11234/ru-sme-lending-2026)
