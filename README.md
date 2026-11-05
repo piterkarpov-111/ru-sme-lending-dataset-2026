@@ -101,3 +101,11 @@ print(df_programs[["program_name", "min_rate_percent", "max_amount_rub"]])
 ## Лицензия и правила цитирования (CC BY 4.0)
 
 Датасет распространяется по открытой лицензии **Creative Commons Attribution 4.0 International (CC BY 4.0)**. Вы можете свободно использовать, копировать и публиковать данные в исследованиях, статьях и обучении ИИ-моделей при условии указания активной ссылки на первоисточник: **[МойФинансист — https://moifinansist.ru](https://moifinansist.ru)**.
+
+---
+
+## Аналитические обзоры и конспекты (Зеркала)
+
+- [Ставки кредитования ИП и ООО в 2026 году, лимиты по счету 51 и взносы ИП (57 390 ₽) — Telegraph](https://telegra.ph/Stavki-kreditovaniya-IP-i-OOO-v-2026-godu-limity-po-schetu-51-i-vznosy-IP-57-390--Otkrytyj-dataset-11-05)
+- [Матрица стоп-факторов банковского скоринга ИП и ООО в 2026 году (115-ФЗ, ЗСК ЦБ РФ, БКИ, EBITDA) — Telegraph](https://telegra.ph/Matrica-stop-faktorov-bankovskogo-skoringa-IP-i-OOO-v-2026-godu-115-FZ-ZSK-CB-RF-BKI-EBITDA-11-05)
+- [Веб-версия документации датасета (GitHub Pages)](https://piterkarpov-111.github.io/ru-sme-lending-dataset-2026/)
